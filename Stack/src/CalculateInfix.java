@@ -61,7 +61,7 @@ public class CalculateInfix {
             }else if (isOperator(ch)){
                 while ((!operator.isEmpty()) && (operator.peek()!='(') &&
                         ((precedence(ch)<precedence(operator.peek())) ||
-                                ((precedence(ch)==precedence(operator.peek()))) &&ch!='^')){
+                                ((precedence(ch)==precedence(operator.peek())) &&ch!='^'))){
                     char op=operator.pop();
                     int b=digit.pop();
                     int a=digit.pop();
